@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complejo Deportivo - Reservas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-nav">
+                <h1><i class="fas fa-tennis-ball"></i> COMPLEJO DEPORTIVO</h1>
+                <nav>
+                    <a href="index.html"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+                    <a href="mis-reservas.html"><i class="fas fa-calendar-alt"></i> Mis Reservas</a>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <div class="page-header">
+                <h2>RESERVA DE CANCHAS DE TENIS</h2>
+            </div>
+            
+            <div class="content-card">
+                <h3>Disponibilidad:</h3>
+                
+                <div class="availability-table">
+                    <div class="table-header">
+                        <div class="col-court">Cancha</div>
+                        <div class="col-status">Estado</div>
+                    </div>
+                    
+                    <div class="table-row available">
+                        <div class="col-court">Cancha 1</div>
+                        <div class="col-status"><span class="status-badge libre">Libre</span></div>
+                    </div>
+                    
+                    <div class="table-row occupied">
+                        <div class="col-court">Cancha 2</div>
+                        <div class="col-status">
+                            <span class="status-badge ocupada">OCUPADA</span>
+                            <span class="ocupation-time">08:00 - 09:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="table-row available">
+                        <div class="col-court">Cancha 3</div>
+                        <div class="col-status"><span class="status-badge libre">Libre</span></div>
+                    </div>
+                    
+                    <div class="table-row occupied">
+                        <div class="col-court">Cancha 4</div>
+                        <div class="col-status">
+                            <span class="status-badge ocupada">OCUPADA</span>
+                            <span class="ocupation-time">07:00 - 08:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="table-row available">
+                        <div class="col-court">Cancha 5</div>
+                        <div class="col-status"><span class="status-badge libre">Libre</span></div>
+                    </div>
+                </div>
+                
+                <hr class="separator">
+                
+                <div class="reservation-form">
+                    <h3>Nueva Reserva</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reservationDate">Seleccione fecha:</label>
+                            <input type="date" id="reservationDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reservationTime">Seleccione hora:</label>
+                            <select id="reservationTime" required>
+                                <option value="">Seleccione una hora</option>
+                                <option value="07:00">07:00 AM</option>
+                                <option value="08:00">08:00 AM</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">01:00 PM</option>
+                                <option value="14:00">02:00 PM</option>
+                                <option value="15:00">03:00 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                                <option value="17:00">05:00 PM</option>
+                                <option value="18:00">06:00 PM</option>
+                                <option value="19:00">07:00 PM</option>
+                                <option value="20:00">08:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="courtSelect">Seleccione cancha:</label>
+                            <select id="courtSelect" required>
+                                <option value="">Seleccione cancha</option>
+                                <option value="1">Cancha 1</option>
+                                <option value="2">Cancha 2</option>
+                                <option value="3">Cancha 3</option>
+                                <option value="4">Cancha 4</option>
+                                <option value="5">Cancha 5</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-primary" onclick="makeReservation()">Reservar turno</button>
+                        <a href="mis-reservas.html" class="btn btn-secondary">Ver mis reservas</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 Complejo Deportivo. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
